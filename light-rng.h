@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
+#include <string.h>  /* strstr */
+#include <math.h>    /* pow(x, y) */
 
 #ifndef TRUE
     #define true !0
@@ -20,14 +21,18 @@ int randomizer(int digits) { /* generate random number from number of digits */
 }
 
 int pi_crawler(int query) { /* crawls the first million digits of pi for a 3 or 4 digit query */
-    int query_digits = __digit_counter(query);
-    for(int i = 0; 
+    int query_digits = __digit_counter(query); 
+    char q[query_digits];
+    sprintf(q, "%d", query);
+    char* pointer = strstr(pi, q);
+
+    /* TODO:  */
 }
 
 int __digit_counter(int n) { /* finds the number of digits */
-    if (n < 0) return numPlaces ((n == INT_MIN) ? INT_MAX: -n);
+    if (n < 0) return numPlaces((n == INT_MIN) ? INT_MAX: -n);
     if (n < 10) return 1;
-    return 1 + numPlaces (n / 10);
+    return 1 + numPlaces(n / 10);
 }
 
 char* __pi_indexer() {
