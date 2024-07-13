@@ -26,7 +26,9 @@ int pi_crawler(int query) { /* crawls the first million digits of pi for a 3 or 
     sprintf(q, "%d", query);
     char* pointer = strstr(pi, q);
 
-    /* TODO:  */
+    int index;
+    index = pi - pointer; /* find index of substring */
+    return index;
 }
 
 int __digit_counter(int n) { /* finds the number of digits */
