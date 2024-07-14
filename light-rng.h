@@ -17,7 +17,9 @@ char* __pi_indexer(); /* turns pi file into char array - wildly innefficient */
 pi = __pi_indexer();
 
 int randomizer(int digits) { /* generate random number from number of digits */
-    /* under construction */
+    for(int i = 0; i < digits; i++) {
+        light_sense(); /* TODO */
+    }
 }
 
 int pi_crawler(int query) { /* crawls the first million digits of pi for a 3 or 4 digit query */
