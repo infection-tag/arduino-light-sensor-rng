@@ -18,7 +18,7 @@ pi = __pi_indexer();
 
 int randomizer(int digits) { /* generate random number from number of digits */
     for(int i = 0; i < digits; i++) {
-        light_sense(); /* TODO */
+        return srand(pi_crawler(230)); /* example input */
     }
 }
 
